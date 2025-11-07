@@ -1,0 +1,24 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chalarca14/API-REST.git"
+  },
+  "author": "santiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chalarca14/API-REST/issues"
+  },
+  "homepage": "https://github.com/chalarca14/API-REST#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
