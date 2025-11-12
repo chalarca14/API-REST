@@ -3,9 +3,9 @@ import { createTasks, getAllTasks, getTasksByUser } from "../controller/tasks.co
 
 const route = express.Router();
 
-route.get("/tasks", getAllTasks)
-route.get("/tasks/user/:userId", getTasksByUser)
-route.post("/tasks", createTasks)
+route.get("/", getAllTasks)
+route.get("/:userId", getTasksByUser)
+route.post("/", createTasks)
 // route.put("/:id")
 // route.delete("/:id")
 

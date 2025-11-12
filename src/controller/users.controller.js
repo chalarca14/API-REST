@@ -17,7 +17,7 @@ export const createUser = async (req, res) => {
 
 // get all users 
 export const getAllUsers = async (req, res) => {
-    const users = await prisma.user.findMany();
+    const users = await prisma.users.findMany();
     res.status(200).json(users);
 }
 
@@ -25,7 +25,7 @@ export const getAllUsers = async (req, res) => {
 
 export const getUserById = async (req, res) => {
     const { id } = req.params;
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
         where: {
             id: parseInt(id)
         }
@@ -37,7 +37,7 @@ export const getUserById = async (req, res) => {
 export const updateUser = async (req, res) => {
     const { id } = req.params;
     const { name, email } = req.body;
-    const updateUser = await prisma.user.update({
+    const updateUser = await prisma.users.update({
         where: { id: parseInt(id) },
         data: { name, email }
     })
@@ -48,7 +48,7 @@ export const updateUser = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
     const {id} = req.params;
-    await prisma.user.delete({
+    await prisma.users.delete({
         were: {id: parseInt(id)}
     });
     res.status(204).send();
